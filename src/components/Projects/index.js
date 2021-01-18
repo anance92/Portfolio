@@ -6,7 +6,7 @@ import portfolio from './portfolios.json';
 function Projects(props) {
   const [ portfolioList ] = useState(portfolio);
   return (
-    <section>
+    <section className="flex-container">
       {
       portfolioList.map(function(item) {
         return <PortfolioList id = {item.id} image = {item.image} name = {item.name} occupation = {item.occupation} location = {item.location} />

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import NavTabs from './Nav/index';
-// import Home from './Home';
+import Resume from './Resume/index';
 import About from './About/index';
 import Projects from './Projects/index';
 import Contact from './Contact/index';
+import Footer from './Footer/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import background from "../assets/media/background.jpg";
 
 function Portfolio() {
   const [currentPage, handlePageChange] = useState('About');
@@ -12,27 +15,35 @@ function Portfolio() {
     // Add a switch statement that will return the appropriate component of the 'currentPage'
     
     switch(currentPage) {
-    //   case "About":
-    //     return <About />;
-      case "Projects":
+      case "Portfolio":
         return <Projects />;
       case "Contact":
         return <Contact />;
+      case "Resume":
+        return <Resume />;
       default:
         return <About />
     }
   };
 
   return (
-    <div>
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+    <div className="background" style={{ 
+        backgroundImage: `url(${background})` }}>
+        <h1>Alexandra Nance</h1>
+        <div className="Nav-Tab" >
+            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+        </div>
       <div>
-          <h1>Alex Nance</h1>
+          
         {
           // Render the component returned by 'renderPage()'
           
           renderPage()
         }
+      </div>
+      <div className="footer">
+          <Footer></Footer>
+          
       </div>
     </div>
   );

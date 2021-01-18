@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Nav(props) {
-  const tabs = ['About', 'Projects', 'Contact'];
+  const tabs = ['About', 'Portfolio', 'Contact', 'Resume'];
   return (
     <ul className="nav nav-tabs">
       {tabs.map(tab => (
@@ -10,7 +10,7 @@ function Nav(props) {
             href={'#' + tab.toLowerCase()}
             onClick={() => props.handlePageChange(tab)}
             className={
-              props.currentPage === tab ? 'nav-link active' : 'nav-link'
+              props.currentPage === tab ? 'nav-link navActive' : 'nav-link'
             }
           >
             {tab}

@@ -1,17 +1,24 @@
 import React from 'react';
-
+import coverImage from "../../assets/cover/Cover.jpg";
 
 function About() {
 
   return (
     <section className="my-5" >
-      <h1 id="about">Who am I?</h1>
-      <img /*src={coverImage}*/ className="my-2" style={{ width: "100%" }} alt="cover" />
+
+      <div className="my-5">
+        <h1 id="about" className="my-2">Who am I?</h1>
+      </div>
       <div className="my-2">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum. Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh. Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
+          My name is Alexandra and I am striving to learn how to develop web applications!
       </p>
       </div>
+
+      <div className="img">
+        <img src={coverImage} className="img" style={{ width: "20%" }} alt="cover" />
+      </div>
+
     </section>
   )
 }
